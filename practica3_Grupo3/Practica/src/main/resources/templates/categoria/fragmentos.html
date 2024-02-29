@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Árboles</title>
+</head>
+<body>
+
+<h1>Lista de Árboles</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre Común</th>
+            <th>Tipo Flor</th>
+            <th>Dureza Madera</th>
+            <!-- Agrega las otras columnas según tus necesidades -->
+            <th>Activo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Itera sobre la lista de árboles y muestra sus propiedades -->
+        <tr th:each="arbol : ${listaArboles}">
+            <td th:text="${arbol.id_arbol}"></td>
+            <td th:text="${arbol.nombre_comun}"></td>
+            <td th:text="${arbol.tipo_flor}"></td>
+            <td th:text="${arbol.dureza_madera}"></td>
+            <!-- Agrega las otras celdas según tus necesidades -->
+            <td th:text="${arbol.activo}"></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
